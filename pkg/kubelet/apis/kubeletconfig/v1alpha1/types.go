@@ -146,6 +146,8 @@ type KubeletConfiguration struct {
 	// status to master. Note: be cautious when changing the constant, it
 	// must work with nodeMonitorGracePeriod in nodecontroller.
 	NodeStatusUpdateFrequency metav1.Duration `json:"nodeStatusUpdateFrequency"`
+	// ContainerGCPeriod is the period for performing container garbage collection.
+	ContainerGCPeriod metav1.Duration `json:"ContainerGCPeriod"`
 	// imageMinimumGCAge is the minimum age for an unused image before it is
 	// garbage collected.
 	ImageMinimumGCAge metav1.Duration `json:"imageMinimumGCAge"`

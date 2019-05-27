@@ -126,6 +126,9 @@ func SetDefaults_KubeletConfiguration(obj *KubeletConfiguration) {
 	if obj.HTTPCheckFrequency == zeroDuration {
 		obj.HTTPCheckFrequency = metav1.Duration{Duration: 20 * time.Second}
 	}
+	if obj.ContainerGCPeriod == zeroDuration {
+		obj.ContainerGCPeriod = metav1.Duration{Duration: 10 * time.Second}
+	}
 	if obj.ImageMinimumGCAge == zeroDuration {
 		obj.ImageMinimumGCAge = metav1.Duration{Duration: 2 * time.Minute}
 	}

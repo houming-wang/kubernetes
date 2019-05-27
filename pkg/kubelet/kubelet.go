@@ -1269,7 +1269,7 @@ func (kl *Kubelet) StartGarbageCollection() {
 
 			glog.V(vLevel).Infof("Container garbage collection succeeded")
 		}
-	}, ContainerGCPeriod, wait.NeverStop)
+	}, kl.kubeletConfiguration.ContainerGCPeriod.Duration, wait.NeverStop)
 
 	prevImageGCFailed := false
 	go wait.Until(func() {

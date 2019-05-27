@@ -184,6 +184,7 @@ var (
 		"ImageGCHighThresholdPercent",
 		"ImageGCLowThresholdPercent",
 		"ImageMinimumGCAge.Duration",
+		"ContainerGCPeriod.Duration",
 		"KubeAPIBurst",
 		"KubeAPIQPS",
 		"KubeReservedCgroup",
